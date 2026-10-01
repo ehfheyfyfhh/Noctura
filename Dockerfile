@@ -4,6 +4,8 @@ WORKDIR /usr/src/app
 COPY . .
 RUN npm i -g pnpm@8
 RUN pnpm i
+RUN pnpm rebuild
 RUN npm run build
 EXPOSE 8080
 CMD ["npm", "start"]
+
